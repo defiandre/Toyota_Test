@@ -7,8 +7,24 @@ modules:
     path: web
     requires:
       - name: Toyota_Test-uaa
+
+  - name: core_db
+    type: hdb
+    path: core_db
+    requires:
+     - name: hdi_core_db
+
 resources:
   - name: Toyota_Test-uaa
     type: com.sap.xs.uaa-space
     parameters:
       config_path: ./xs-security.json
+
+  - name: hdi_core_db
+    parameters:
+       config:
+          schema: Toyota
+    properties:
+       hdi-container-name: ${service-name}
+    type: com.sap.xs.hdi-container
+
