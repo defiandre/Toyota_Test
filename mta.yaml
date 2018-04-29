@@ -5,6 +5,8 @@ modules:
   - name: web
     type: html5
     path: web
+    requires:
+      - name: Toyota_Test-uaa
 resources:
   - name: Toyota_Test-uaa
     type: com.sap.xs.uaa-space
