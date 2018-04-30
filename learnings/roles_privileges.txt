@@ -1,0 +1,3 @@
+Roles are a set of privileges.
+System privileges include CREATE SCHEMA, TABLEADMIN, IMPORT, etc.
+Analytical privileges control row level access. Can be defined on views.
