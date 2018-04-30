@@ -1,0 +1,9 @@
+Hana Cockpit -> Your Org -> Your space (dev)
+Create User Provided Service instance. User Provided Service allows access to non-container schemas (e.g. ERP)
+Instance ismini ver, credentials kismina host, port, username, pw, ve schema belirten json giriyorsun.
+Resource tanimlaman gerekiyor.
+service-name parametresine yarattigin instance i yaziyorsun. Ayrica yeni bi property yaratarak application code unu bu propertyi kullanmasini sagliyorsun. 
+boylece instance ismi degisirse application code degismiyor.
+Group = SERVICE_REPLACEMENTS
+
+cfg (ozel bi klasor adi) klasorunde object_owner ve application_user a SELECT hakki verdim.
