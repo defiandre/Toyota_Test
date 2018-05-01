@@ -1,0 +1,13 @@
+Ilk once xs deploy komutuyla daha onceden yaratilmis bir servisi XS'e deploy ettik
+xs target komutuyla organizasyon ve space'in deploy etmek istedigimiz yere yonelmesini sagladik.
+Bir resource yarattik. Projemizdeki modul bu resource'u 'require' edecek.
+Resource parametre key'i "service-name" ve value Admin - Service Instance daki ismi.
+SERVICE_REPLACEMENTS ve diger ufak configurasyonlari doldurduk.
+
+hdbgrant dosyasi yarattim. Bu dosya benim applicationumun technical user'ina ulasmak istedigim servisten roller verir.
+object_owner'a admn, application user'a da sadece consumption rolu verdim.
+
+Synonym yarattim. Obur servisteki objectlere bu serviste ne adi verelim?
+hdbsynonymtemplate yarattim. Hdbsynonym deki her entry icin grantor hangi servis ve object hangi object, onu specify ediyorsun.
+
+Build'den sonra oteki servisteki tablolara synonymler yoluyla ulasabiliyorum.

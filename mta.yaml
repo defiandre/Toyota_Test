@@ -18,6 +18,11 @@ modules:
         properties:
           key: hdi-sflight-service
           value: '~{sflight-service-name}'
+      - name: CentralDB
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: central-db-service
+          service: '~{central-db-name}'
 resources:
   - name: Toyota_Test-uaa
     type: com.sap.xs.uaa-space
@@ -36,3 +41,9 @@ resources:
       service-name: CROSS_SCHEMA_SFLIGHT
     properties:
       sflight-service-name: '${service-name}'
+  - name: CentralDB
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: openSAP.CentralDB.opensap-central-container
+    properties:
+      central-db-name: '${service-name}'
